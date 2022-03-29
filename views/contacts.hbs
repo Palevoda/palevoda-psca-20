@@ -1,0 +1,12 @@
+    <div class="row text-center  w-50" >
+        <div class="container-fluid border border-dark " style="height: 350px;overflow-y:scroll">
+            {{#each contacts}}
+                {{>contact}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="row  w-100">
+        <div class="col-12 text-center">
+            <button onclick="window.location.href = '/add'"  class="btn btn-outline-dark rounded-0 px-1 w-25">Добавить</button>
+        </div>
+    </div>

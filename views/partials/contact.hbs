@@ -1,0 +1,11 @@
+<div class="row border-2 border border-dark p-1 rounded rounded-3 m-2 form-part" style = "color: rgb(59,59,59)"  data-key="{{id}}"
+{{#if @root.canGetButtons}}
+     onclick="window.location.href = '/update?id={{id}}'"
+{{/if}}>
+          <div class="col-6"> 
+               <b>{{name}}</b>
+          </div> 
+            <div class="col-6"> 
+               <b>{{phone}}</b>
+          </div>
+</div>

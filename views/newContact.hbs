@@ -1,0 +1,35 @@
+<div class="row text-center  w-50">
+        <div class="container-fluid border border-dark " style="height: 350px;overflow-y:scroll">
+            {{#each contacts}}
+                {{>contact}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="row  d-flex  h-50 justify-content-center align-items-center">
+        <div class="col-6 text-center">
+            <input type="text" class="border border-dark border-1" name="name" id = "phone"  placeholder="Имя">
+            <input type="text" class="border border-dark border-1" name="phone" oninput="phoneOnChange(this.value)" placeholder="+375CCXXXXXXXXX">
+        </div>
+        <div class="col-6 text-center">
+            <div >
+                <button class="btn btn-outline-dark rounded-0 px-1 w-100" onclick="addContact()">Да</button>
+            </div>
+            <div>
+                <button class="btn btn-outline-dark rounded-0 px-1 w-100" onclick="{{goBack}}" >Отмена</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    function phoneOnChange(event) {
+        const phonePattern = "^(\\+375|80)(29|25|44|33)(\\d{3})(\\d{2})(\\d{2})$";
+        const phoneValidation = new RegExp(phonePattern);
+        if (!phoneValidation.test(event)) {
+            document.querySelector('button').disabled = true;
+        }
+        if (phoneValidation.test(event)) {
+            document.querySelector('button').disabled = false;
+        }
+    }
+</script>

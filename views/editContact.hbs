@@ -1,0 +1,29 @@
+    <div class="row text-center  w-50">
+        <div class="container-fluid border border-dark " style="height: 350px;overflow-y:scroll">
+            {{#each contacts}}
+                {{>contact}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="row  d-flex  h-50 justify-content-center align-items-center">
+        <div class="col-6 text-center edit form" data-key="{{currentContact.id}}"">
+                        <input class="border border-dark border-1" type="text" name="name" placeholder="Имя" value="{{currentContact.name}}"
+                        oninput="blockButton('{{currentContact.name}}', '{{currentContact.phone}}')">
+                        <input class="border border-dark border-1" type="text" name="phone" placeholder="Телефон" value="{{currentContact.phone}}"
+                        oninput="blockButton('{{currentContact.name}}', '{{currentContact.phone}}')">
+        </div>
+        <div class="col-6 text-center">
+            <div >
+                <button class="btn btn-outline-dark rounded-0 px-1 w-100" id = "save-btn" onclick="editContact()">Ок</button>
+            </div>
+            <div>
+                <button class="btn btn-outline-dark rounded-0 px-1 w-100" onclick="deleteContact()" id="delete-button">Удалить</button>
+            </div>
+            <div>
+                <button class="btn btn-outline-dark rounded-0 px-1 w-100" onclick="{{goBack}}">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

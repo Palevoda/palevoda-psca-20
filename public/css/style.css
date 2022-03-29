@@ -1,0 +1,42 @@
+html, body 
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: SamsungSharpSans; /* Имя шрифта */
+    src: url(fonts/SamsungSharpSans.ttf); /* Путь к файлу со шрифтом */
+    }
+
+    @font-face {
+    font-family: SamsungOne400; /* Имя шрифта */
+    src: url(fonts/SamsungOne400.ttf); /* Путь к файлу со шрифтом */
+    }
+    body {
+        background: white;
+        font-family: SamsungOne400;
+    }
+
+    h5
+    {
+        font-family: SamsungSharpSans;
+
+    }
+
+.btn
+{
+    font-family: SamsungSharpSans;
+}
+
+b
+{
+    font-family: SamsungOne400;
+}
+
+input[type="text"]
+{
+    font-family: SamsungOne400;
+}
+    
